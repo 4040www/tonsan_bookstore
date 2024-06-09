@@ -51,10 +51,10 @@ export default function EmployeeManage() {
             console.log('Updated employee:', editedName);
             console.log('Editing employee:', currentEmployeeId);
             await editUser(editedName, currentEmployeeId);
-            alert('已成功編輯待辦事項');
+            alert('已成功編輯員工資料');
         } catch (error) {
             console.error('Failed to edit employee:', error);
-            alert('編輯員工失敗');
+            alert('編輯員工資料失敗');
         }
         setEmployees(updatedEmployees);
         setIsEditing(false);
