@@ -1,0 +1,84 @@
+.wrapcard {
+  margin: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container h2 {
+  margin-right: 8px;
+}
+
+.title-container input {
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  margin-right: 8px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.container p {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.container input {
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  white-space: normal; /* 允许换行 */
+}
+
+.ellipsis {
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 溢出显示省略号 */
+}
+
+
+.cardButton {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+.cardButton:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,69 @@
+.wrapcard {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    padding: 10px;
+    margin-right: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+  }
+  
+  .listCard {
+    /* Add shadows to create the "card" effect */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    width:100%;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    width: 500px; 
+    height: 200px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .statusBar {
+    height: 10px;
+    width: 100%;
+  }  
+  /* On mouse-over, add a deeper shadow */
+  .listCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  
+  .cardButton {
+    width:100%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    color:black;
+  }
+
+  .name-text {
+    color:rgb(84, 82, 82);
+  }
+
+  .allListCard {
+    /* Add shadows to create the "card" effect */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    width:100%;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    width: 250px; 
+    height: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .container-all{
+    padding: 2px 16px;
+  }

@@ -1,0 +1,50 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.btn{
+    display: flex;
+    gap: 30px;
+    align-items: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.edit-btn {
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-size: 0.8rem;
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .edit-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .cardButton {
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .cardButton:hover {
+    background-color: black;
+    color: white;
+  }
