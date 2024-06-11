@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card_order.css';
 import { createPhysicalOrder, Overview, deletePhysicalOrder, editPhysicalOrder } from '../../api';
-import store from '../../../public/store.png';
+import store from '/store.png';
 
 export default function Store_order() {
     const [filter, setFilter] = useState('all');

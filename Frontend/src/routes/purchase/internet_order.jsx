@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card_order.css';
 import { createOrder, Overview, deleteOnlineOrder, editOnlineOrder } from '../../api';
-import online from '../../../public/online.png';
+import online from '/online.png';
 
 export default function Internet_order() {
     const [filter, setFilter] = useState('all');

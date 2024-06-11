@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card_todo.css';
 import { eventsToDo, Overview, deleteEventsToDo, editEventsToDo } from '../../api';
-import todo from '../../../public/todo.png';
+import todo from '/todo.png';
 
 export default function To_do_list() {
     const [filter, setFilter] = useState('all');

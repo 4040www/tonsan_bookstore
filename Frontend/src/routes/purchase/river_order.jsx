@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card_order.css';
 import { createRiverOrder, Overview, deleteRiverOrder, editRiverOrder } from '../../api';
-import water from '../../../public/water.png';
+import water from '/water.png';
 
 export default function River_order() {
     const [filter, setFilter] = useState('all');
