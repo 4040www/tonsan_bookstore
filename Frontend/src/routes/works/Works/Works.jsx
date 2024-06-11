@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AllCard from "./AllCard";
 import { Overview } from '../../../api';
-import overview from '../../../../public/overview.png';
+import overview from '/overview.png';
 
 export default function Works() {
 
@@ -37,7 +37,7 @@ export default function Works() {
       <h3>依照工作類別分類</h3>
       <div className="">
         {homeData.length === 0 ? (
-          <p>Loading...</p>
+          <p style={{fontSize: '20px' }}>Loading...</p>
         ) : (
           <div className='flex-card'>
             <AllCard type={'restockandrefund'} data={filterDataByType('restockandrefund')} />

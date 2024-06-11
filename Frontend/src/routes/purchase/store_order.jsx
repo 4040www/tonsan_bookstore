@@ -286,7 +286,7 @@ export default function Store_order() {
     const handleInputChangeDate = (e) => {
         const { name, value } = e.target;
         const date = new Date(value);
-        date.setDate(date.getDate() + 1);
+        date.setDate(date.getDate());
         const newDate = date.toISOString().substring(0, 10);
         setNewTask((prevTask) => ({
             ...prevTask,

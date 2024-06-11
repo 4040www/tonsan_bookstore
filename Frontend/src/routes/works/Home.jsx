@@ -75,30 +75,34 @@ export default function Home() {
         <h1>今日工作</h1>
       </div>
       <h3>今天的日期：<span id="current-date">{currentDate}</span></h3>
-      <div className="card-container">
-        <div id="home" style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {homeData.map((item, index) => (
-            <div className="cardi" key={index} style={{ width: '30%', margin: '1.5%' }}>
-              <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
-              <div className="margins">
-                <h3>{item.name}</h3>
-                <p>事項種類 : {getName(item.source_table)}</p>
-                <div className='name-text'>
-                  <p>登記者 : {item.registrant}</p>
-                  <p>負責人 : {item.responsible}</p>
-                </div>
-                <p>截止日期 : {(item.due_time).substring(0, 10)}</p>
-                <p>細項說明 : {item.note}</p>
-                {/* <div className="button-group">
+      {homeData.length === 0 ? (
+        <p style={{fontSize: '20px' }}>Loading...</p>
+      ) : (
+        <div className="card-container">
+          <div id="home" style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {homeData.map((item, index) => (
+              <div className="cardi" key={index} style={{ width: '30%', margin: '1.5%' }}>
+                <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
+                <div className="margins">
+                  <h3>{item.name}</h3>
+                  <p>事項種類 : {getName(item.source_table)}</p>
+                  <div className='name-text'>
+                    <p>登記者 : {item.registrant}</p>
+                    <p>負責人 : {item.responsible}</p>
+                  </div>
+                  <p>截止日期 : {(item.due_time).substring(0, 10)}</p>
+                  <p>細項說明 : {item.note}</p>
+                  {/* <div className="button-group">
                   <button className="edit-btn" onClick={() => handleEditClick(item)}>Edit</button>
                   <button className="delete-btn" onClick={() => handleDeleteClick(item)}>Delete</button>
                 </div> */}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-      </div>
+        </div>
+      )}
     </div>
   );
 }

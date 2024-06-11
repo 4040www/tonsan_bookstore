@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card_deliver.css';
 import { restockAndRefund, Overview, editDeliverOrder, deleteDeliverOrder } from '../../api';
-import cart from '../../../public/cart.png';
+import cart from '/cart.png';
 
 export default function Deliver_goods() {
     const [filter, setFilter] = useState('all');
