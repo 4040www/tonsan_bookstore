@@ -122,9 +122,9 @@ export default function Deliver_goods() {
 
     const handleEditClick = (data) => {
         let statusInEdit;
-        if(data.status === 0) {
+        if (data.status === 0) {
             statusInEdit = '未完成';
-        } else if(data.status === 1) {
+        } else if (data.status === 1) {
             statusInEdit = '已完成';
         } else {
             statusInEdit = '釘選';
@@ -173,7 +173,7 @@ export default function Deliver_goods() {
                     editingTask.author === null ||
                     editingTask.description === null ||
                     editingTask.responsibleName === null ||
-                    editingTask.status === null 
+                    editingTask.status === null
                 ) {
                     console.log('Editing task:', editingTask);
                     alert('有項目為空白，請重新輸入！');
@@ -398,26 +398,30 @@ export default function Deliver_goods() {
                         </>
                     )}
                 </div>
-                <div className='padding-deliver'>
-                    {stockData.map((item, index) => (
-                        <div className="cardi" key={index}>
-                            <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
-                            <div className="margins">
-                                <h3>{item.name}</h3>
-                                <div className='name-text'>
-                                    <p>登記者 : {item.registrant}</p>
-                                    <p>負責人 : {item.responsible}</p>
-                                </div>
-                                <p>截止日期 : {(item.due_time).substring(0, 10)}</p>
-                                <p>細項說明 : {item.note}</p>
-                                <div className="button-group">
-                                    <button className="edit-btn" onClick={() => handleEditClick(item)}>Edit</button>
-                                    <button className="delete-btn" onClick={() => handleDeleteClick(item)}>Delete</button>
+                {stockData.length === 0 ? (
+                    <p style={{ marginLeft: '20px', fontSize: '20px' }}>Loading...</p>
+                ) : (
+                    <div className='padding-deliver'>
+                        {stockData.map((item, index) => (
+                            <div className="cardi" key={index}>
+                                <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
+                                <div className="margins">
+                                    <h3>{item.name}</h3>
+                                    <div className='name-text'>
+                                        <p>登記者 : {item.registrant}</p>
+                                        <p>負責人 : {item.responsible}</p>
+                                    </div>
+                                    <p>截止日期 : {(item.due_time).substring(0, 10)}</p>
+                                    <p>細項說明 : {item.note}</p>
+                                    <div className="button-group">
+                                        <button className="edit-btn" onClick={() => handleEditClick(item)}>Edit</button>
+                                        <button className="delete-btn" onClick={() => handleDeleteClick(item)}>Delete</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </>
     );

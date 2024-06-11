@@ -175,7 +175,7 @@ export default function To_do_list() {
                     editingTask.author === null ||
                     editingTask.description === null ||
                     editingTask.responsibleName === null ||
-                    editingTask.status === null 
+                    editingTask.status === null
                     // || !dateChange
                 ) {
                     alert('有項目為空白，請重新輸入！');
@@ -394,26 +394,30 @@ export default function To_do_list() {
                         </div>
                     )}
                 </div>
-                <div className='padding-deliver'>
-                    {toDoData.map((item, index) => (
-                        <div className="cardi" key={index}>
-                            <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
-                            <div className="margins">
-                                <h3>{item.name}</h3>
-                                <div className='name-text'>
-                                    <p>登記者 : {item.registrant}</p>
-                                    <p>負責人 : {item.responsible}</p>
-                                </div>
-                                <p>截止日期 : {item.due_time.substring(0, 10)}</p>
-                                <p>細項說明 : {item.note}</p>
-                                <div className="button-group">
-                                    <button className="edit-btn" onClick={() => handleEditClick(item)}>Edit</button>
-                                    <button className="delete-btn" onClick={() => handleDeleteClick(item)}>Delete</button>
+                {toDoData.length === 0 ? (
+                    <p style={{ marginLeft: '20px', fontSize: '20px' }}>Loading...</p>
+                ) : (
+                    <div className='padding-deliver'>
+                        {toDoData.map((item, index) => (
+                            <div className="cardi" key={index}>
+                                <div className="statusBar" style={{ backgroundColor: setStatusColor(item.status) }}></div>
+                                <div className="margins">
+                                    <h3>{item.name}</h3>
+                                    <div className='name-text'>
+                                        <p>登記者 : {item.registrant}</p>
+                                        <p>負責人 : {item.responsible}</p>
+                                    </div>
+                                    <p>截止日期 : {item.due_time.substring(0, 10)}</p>
+                                    <p>細項說明 : {item.note}</p>
+                                    <div className="button-group">
+                                        <button className="edit-btn" onClick={() => handleEditClick(item)}>Edit</button>
+                                        <button className="delete-btn" onClick={() => handleDeleteClick(item)}>Delete</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </>
     );

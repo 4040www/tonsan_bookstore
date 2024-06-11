@@ -7,7 +7,7 @@ export default function Notes() {
     <div id="notes" className='note'>
       <h1>唐山書店交接系統使用說明</h1>
       <h2>員工管理</h2>
-      <div className="btn">
+      <div className="note-btn">
         <nav>
           <Link to={`/EmployeeManage`}><button className="edit-btn" >前往員工管理系統</button></Link>
         </nav>
