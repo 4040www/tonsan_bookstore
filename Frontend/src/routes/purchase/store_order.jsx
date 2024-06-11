@@ -96,6 +96,11 @@ export default function Store_order() {
     // Delete order ------------------------------------------------------------------
 
     const handleDeleteClick = async (item) => {
+        const isConfirmed = window.confirm("確定要刪除此待辦事項嗎？");
+
+        if (!isConfirmed) {
+            return;
+        }
         try {
             await deletePhysicalOrder(item.id);
             alert('已成功刪除待辦事項');
@@ -117,9 +122,9 @@ export default function Store_order() {
 
     const handleEditClick = (data) => {
         let statusInEdit;
-        if(data.status === 0) {
+        if (data.status === 0) {
             statusInEdit = '未完成';
-        } else if(data.status === 1) {
+        } else if (data.status === 1) {
             statusInEdit = '已完成';
         } else {
             statusInEdit = '釘選';

@@ -96,6 +96,11 @@ export default function Internet_order() {
     // Delete order ------------------------------------------------------------------
 
     const handleDeleteClick = async (item) => {
+        const isConfirmed = window.confirm("確定要刪除此待辦事項嗎？");
+
+        if (!isConfirmed) {
+            return;
+        }
         try {
             await deleteOnlineOrder(item.id);
             alert('已成功刪除待辦事項');
