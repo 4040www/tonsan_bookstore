@@ -1,45 +1,59 @@
 # 唐山書店員工事務交接系統 (Tonsan Bookstore Employee Handoff System)
 
-This repository contains the final project for the **Introduction to Information Management** course by Group 7. The project aims to streamline the handoff process for employees at Tonsan Bookstore, a well-known independent bookstore founded in 1982, located in the alleys of Wenzhou Street.
+# 唐山書店員工事務交接系統 📚
 
-## 🛠️ Features
+本系統為 **唐山書店** 設計，旨在提升店內員工的事務交接效率，確保日常運營順暢。透過 **數位化管理**，員工能夠更直觀地查看當日工作事項，並有效管理訂單、進退貨、活動與員工資訊。
 
-### **Daily Tasks**
-- Displays all tasks for the day.
-- Allows editing and deleting tasks.
-- Highlights order status with color indicators.
+---
 
-### **Task Overview**
-- Categorizes all orders and tasks.
-- Shows the status of each order.
-- Supports filtering for easy navigation.
+## 🚀 專案簡介
+### 📍 **專案背景**
+唐山書店為台灣知名獨立書店，現有店長、副店長及 5-6 名工讀生。過去，員工間透過 **Google 文件** 紀錄交接事項，但存在以下痛點：
+- 事項堆疊在同一份文件，**難以查找** 特定資訊。
+- 無法清楚區分不同類別事項，**檢索效率低**。
+- 需花費額外時間進行手動整理。
 
-### **Record Management**
-- Allows adding, editing, and deleting records for orders, purchases, and activities.
-- Filters specific categories for streamlined searches.
+本系統的核心目標是 **簡化交接流程**，確保店內管理更具結構性與高效性。
 
-### **Employee Management**
-- Adds new employees.
-- Edits and deletes employee profiles.
+### 🛠 **技術架構**
+- **前端 (Frontend)**：React
+- **後端 (Backend)**：Express
+- **資料庫 (Database)**：PostgreSQL
 
-## 🚀 Benefits
-- **Improved Communication:** Reduces communication costs among employees.
-- **Streamlined Task Management:** Provides clear task statuses and progress tracking.
-- **Automatic Organization:** Automatically archives tasks and records for future reference.
+---
 
-## 📖 System Highlights
-1. **Easy Navigation:** Clear labels and filtering options for specific tasks and categories.
-2. **Progress Tracking:** Monitors the status of tasks across employees for smooth handoff.
-3. **Time Efficiency:** Consolidates information into a unified system to save time.
+## 🎯 主要功能
+### 📆 **今日工作**
+- 顯示所有當日代辦事項
+- 可編輯 / 刪除代辦事項
+- 以顏色標示訂單狀態
 
-## 🌟 Future Prospects
-- Expand the system to accommodate larger-scale operations.
-- Facilitate digital transformation for traditional industries.
-- Customize the system to meet the specific needs of different bookstores.
+### 📋 **工作總覽**
+- 依據類別分類所有工作事項
+- 顯示訂單處理狀態
+- 過濾篩選不同類型的交接內容
+
+### 📌 **紀錄 / 採購 / 活動管理**
+- 新增 / 編輯 / 刪除訂單
+- 顯示訂單當前狀態
+- 透過篩選器檢視特定類別的事項
+
+### 👥 **員工管理**
+- 新增 / 編輯 / 刪除員工資訊
+- 提供詳細的使用說明，讓新員工能快速上手
+
+---
+
+## 🔮 預期效益
+✅ 降低員工間的溝通成本
+✅ 透過篩選器清楚標示交接事項，確保任務銜接順暢
+✅ 紀錄自動分類與歸檔，減少手動整理的時間
+
+---
 
 ## 📜 Team Members
-- 宋凱翔
-- 郭菲霓
-- 陳研希
-- 陳詣斌
-- 黃子維
+- 資管二 宋凱翔
+- 資管二 郭菲霓
+- 資管二 陳研希
+- 資管二 陳詣斌
+- 資管二 黃子維
